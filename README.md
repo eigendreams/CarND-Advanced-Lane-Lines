@@ -19,7 +19,7 @@ The approach used is pretty much what was described in the lectures, with a few 
 			failure prune. Also I wanted to get ALL lines possible, if there are more visible and recognized.
 		2.- I just cannot do well enough on those white sections of the road. It is just frustrating. The
 			pipeline does not dies of course, but lane identification is clearly subpar
-		3.- I applied an EM (Expectation MAximization of sorts), which is just saying that the found lanes
+		3.- I applied an EM (Expectation Maximization of sorts), which is just saying that the found lanes
 			in (1) are then used to get preliminary fits, and the these are used as starting points against
 			the warped lane markers binary image to try to get better fits using a few iterations, defining
 			a 'range' around the fit to classify valid points. Clearly, a robust fittig algo could work
@@ -100,4 +100,4 @@ Rubric:
 
 Is realized in a way, on each posterior frame, the previous best fits are added to the list of fits for optimization.
 This helps for outliers, as if a fit is the best, it will be selected over the others (for each side). Expensive though,
-as I actually consume more time for doing this.
+as I actually consume more time for doing this, so I do not save any time.
